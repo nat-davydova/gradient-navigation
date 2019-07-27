@@ -7,6 +7,11 @@ body a {
   text-decoration: none;
 }
 
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
   transition-property: all;
   transition-duration: 0.2s;
@@ -29,11 +34,6 @@ body a {
 
 .header__title {
   font-weight: 500;
-}
-
-.header__btns {
-  display: flex;
-  justify-content: center;
 }
 
 .content {
