@@ -139,3 +139,27 @@ setGradientBg();
 
 //recalc and set gradient on resize
 window.addEventListener('resize', setGradientBg);
+
+//rebuild grad on direction button click 
+const dirBtns = document.querySelectorAll('.grad-btn');
+
+dirBtns.forEach(elem => {
+
+  elem.addEventListener('click', () => {
+
+    //setting new direction
+    const dir = elem.dataset.dir;
+
+    nav.dataset.gradientDirection = dir;
+
+    //recalc background
+    setGradientBg();
+
+    //make clicked btn active
+    dirBtns.forEach(elem => elem.classList.remove('js-active'));
+
+    elem.classList.add('js-active');
+
+  });
+
+});
