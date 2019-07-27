@@ -7,6 +7,32 @@ body a {
   text-decoration: none;
 }
 
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+.btn:last-child {
+  margin-right: 0;
+}
+.btn:hover, .btn.js-active {
+  color: #fff;
+  background-color: #2c2c2c;
+}
+
 .header {
   max-width: 500px;
   margin: 50px auto;
@@ -17,21 +43,81 @@ body a {
   font-weight: 500;
 }
 
-.header__btns {
-  display: flex;
-  justify-content: center;
+.content {
+  max-width: 700px;
+  margin: auto;
 }
 
-.header__btn {
+.content__section {
+  margin-bottom: 50px;
+}
+
+.content__title {
+  font-weight: 500;
+  text-align: center;
+}
+
+.grad-btn--top i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.grad-btn--bottom i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.grad-btn--left i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.grad-btn--top-left i {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.grad-btn--top-right i {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.grad-btn--bottom-left i {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.grad-btn--bottom-right i {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-area {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.nav-area__item {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
-  padding: 10px 30px;
-  border: 1px solid #2c2c2c;
-  border-radius: 3px;
-}
-.header__btn:hover {
+  padding: 40px 20px;
+  text-align: center;
   color: #fff;
-  background-color: #2c2c2c;
+  background-image: linear-gradient(to top right, #00fff0, #5c9ff7 40%, #d322ff 80%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-area__item:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-area__item-icon {
+  font-size: 25px;
+}
+
+.nav-area__item-title > p {
+  margin-bottom: 0;
 }

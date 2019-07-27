@@ -23,6 +23,38 @@ body {
   }
 }
 
+//btn styles
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  @include transition-mix;
+  
+  padding: 10px 20px;
+  margin-right: 10px;
+  
+  background-color: #fff;
+  border: 1px solid $theme-font-color;
+  border-radius: 3px;
+  
+  cursor: pointer;
+  
+  outline: none;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &:hover,
+  &.js-active{
+    color: #fff;
+    
+    background-color: $theme-font-color;
+  }
+}
+
 //header styles
 .header {
   max-width: 500px;
@@ -37,22 +69,114 @@ body {
   }
 }
 
-.header__btns {
-  display: flex;
-  justify-content: center;
+//content styles
+.content {
+  max-width: 700px;
+  margin: auto;
 }
 
-.header__btn {
-  @include transition-mix;
+.content__section {
+  margin-bottom: 50px;
+}
+
+.content__title {
+  font: {
+    weight: 500;
+  }
+  text-align: center;
+}
+
+//gradient btns styles
+.grad-btn--top {
   
-  padding: 10px 30px;
+  i {
+    transform: rotate(- 90deg);
+  }
+}
+
+.grad-btn--bottom {
   
-  border: 1px solid $theme-font-color;
-  border-radius: 3px;
+  i {
+    transform: rotate(90deg);
+  }
+}
+
+.grad-btn--left {
+  
+  i {
+    transform: rotate(180deg);
+  }
+}
+
+.grad-btn--top-left {
+  
+  i {
+    transform: rotate(-135deg);
+  }
+}
+
+.grad-btn--top-right {
+  
+  i {
+    transform: rotate(-45deg);
+  }
+}
+
+.grad-btn--bottom-left {
+  
+  i {
+    transform: rotate(135deg);
+  }
+}
+
+.grad-btn--bottom-right {
+  
+  i {
+    transform: rotate(45deg);
+  }
+}
+
+//nav area styles
+.nav-area {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.nav-area__item {
+  @include transition-mix();
+  
+  padding: 40px 20px;
+  
+  text-align: center;
+  color: #fff;
+  
+  background-image: linear-gradient(to top right, 
+    #00fff0, 
+    #5c9ff7 40%, 
+    #d322ff 80% );
+  border-radius: 5px;
+  
+  cursor: pointer;
   
   &:hover {
-    color: #fff;
-    
-    background-color: $theme-font-color;
+    box-shadow: 
+      0 4px 5px 0 rgba(0,0,0,0.14), 
+      0 1px 10px 0 rgba(0,0,0,0.12), 
+      0 2px 4px -1px rgba(0,0,0,0.3);
   }
+}
+
+.nav-area__item-icon {
+  font: {
+    size: 25px;
+  }
+}
+
+.nav-area__item-title  {
+  
+  & > p {
+    margin-bottom: 0;
+  }
+  
 }
