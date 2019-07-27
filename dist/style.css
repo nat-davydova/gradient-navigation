@@ -28,7 +28,7 @@ body a {
 .btn:last-child {
   margin-right: 0;
 }
-.btn:hover {
+.btn:hover, .btn.js-active {
   color: #fff;
   background-color: #2c2c2c;
 }
@@ -49,7 +49,7 @@ body a {
 }
 
 .content__section {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .content__title {
@@ -90,4 +90,10 @@ body a {
 .grad-btn--bottom-right i {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.nav-area {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }

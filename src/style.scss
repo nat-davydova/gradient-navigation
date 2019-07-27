@@ -47,7 +47,8 @@ body {
     margin-right: 0;
   }
   
-  &:hover {
+  &:hover,
+  &.js-active{
     color: #fff;
     
     background-color: $theme-font-color;
@@ -75,7 +76,7 @@ body {
 }
 
 .content__section {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .content__title {
@@ -133,4 +134,11 @@ body {
   i {
     transform: rotate(45deg);
   }
+}
+
+//nav area styles
+.nav-area {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
