@@ -74,9 +74,63 @@ body {
   margin: auto;
 }
 
+.content__section {
+  margin-bottom: 30px;
+}
+
 .content__title {
   font: {
     weight: 500;
   }
   text-align: center;
+}
+
+//gradient btns styles
+.grad-btn--top {
+  
+  i {
+    transform: rotate(- 90deg);
+  }
+}
+
+.grad-btn--bottom {
+  
+  i {
+    transform: rotate(90deg);
+  }
+}
+
+.grad-btn--left {
+  
+  i {
+    transform: rotate(180deg);
+  }
+}
+
+.grad-btn--top-left {
+  
+  i {
+    transform: rotate(-135deg);
+  }
+}
+
+.grad-btn--top-right {
+  
+  i {
+    transform: rotate(-45deg);
+  }
+}
+
+.grad-btn--bottom-left {
+  
+  i {
+    transform: rotate(135deg);
+  }
+}
+
+.grad-btn--bottom-right {
+  
+  i {
+    transform: rotate(45deg);
+  }
 }

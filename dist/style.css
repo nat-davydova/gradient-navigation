@@ -48,7 +48,46 @@ body a {
   margin: auto;
 }
 
+.content__section {
+  margin-bottom: 30px;
+}
+
 .content__title {
   font-weight: 500;
   text-align: center;
+}
+
+.grad-btn--top i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.grad-btn--bottom i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.grad-btn--left i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.grad-btn--top-left i {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.grad-btn--top-right i {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.grad-btn--bottom-left i {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.grad-btn--bottom-right i {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
