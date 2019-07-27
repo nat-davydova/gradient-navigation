@@ -33,9 +33,19 @@ body {
   @include transition-mix;
   
   padding: 10px 20px;
+  margin-right: 10px;
   
+  background-color: #fff;
   border: 1px solid $theme-font-color;
   border-radius: 3px;
+  
+  cursor: pointer;
+  
+  outline: none;
+  
+  &:last-child {
+    margin-right: 0;
+  }
   
   &:hover {
     color: #fff;
@@ -62,4 +72,11 @@ body {
 .content {
   max-width: 700px;
   margin: auto;
+}
+
+.content__title {
+  font: {
+    weight: 500;
+  }
+  text-align: center;
 }
