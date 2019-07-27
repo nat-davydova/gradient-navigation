@@ -23,6 +23,22 @@ body {
   }
 }
 
+//btn styles
+.btn {
+  @include transition-mix;
+  
+  padding: 10px 20px;
+  
+  border: 1px solid $theme-font-color;
+  border-radius: 3px;
+  
+  &:hover {
+    color: #fff;
+    
+    background-color: $theme-font-color;
+  }
+}
+
 //header styles
 .header {
   max-width: 500px;
@@ -42,17 +58,8 @@ body {
   justify-content: center;
 }
 
-.header__btn {
-  @include transition-mix;
-  
-  padding: 10px 30px;
-  
-  border: 1px solid $theme-font-color;
-  border-radius: 3px;
-  
-  &:hover {
-    color: #fff;
-    
-    background-color: $theme-font-color;
-  }
+//content styles
+.content {
+  max-width: 700px;
+  margin: auto;
 }
