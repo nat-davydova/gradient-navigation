@@ -1,9 +1,21 @@
+//mixins
+@mixin transition-mix ($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+//variables
+$theme-font-color: #2c2c2c;
+
+
 //common styles
 body {
   font: {
     family: 'Roboto', sans-serif;
   }
-  color: #2c2c2c;
+  color: $theme-font-color;
   
   a {
     color: inherit;
@@ -22,5 +34,25 @@ body {
 .header__title {
   font: {
     weight: 500;
+  }
+}
+
+.header__btns {
+  display: flex;
+  justify-content: center;
+}
+
+.header__btn {
+  @include transition-mix;
+  
+  padding: 10px 30px;
+  
+  border: 1px solid $theme-font-color;
+  border-radius: 3px;
+  
+  &:hover {
+    color: #fff;
+    
+    background-color: $theme-font-color;
   }
 }
