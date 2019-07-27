@@ -123,11 +123,19 @@ const setGrad = elem => {
 
 };
 
-//setting gradient styles to every item
-navItems.forEach(elem => {
+//setting gradient styles function
+const setGradientBg = () => {
+  navItems.forEach(elem => {
 
-  colRow();
+    colRow();
 
-  setGrad(elem);
+    setGrad(elem);
 
-});
+  });
+};
+
+//setting gradient onload
+setGradientBg();
+
+//recalc and set gradient on resize
+window.addEventListener('resize', setGradientBg);
