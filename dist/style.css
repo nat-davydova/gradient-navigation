@@ -107,6 +107,7 @@ body a {
   text-align: center;
   color: #fff;
   border-radius: 5px;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 .nav-area__item:hover {

@@ -11,7 +11,7 @@ const gradValue = () => {
 //grabbing gradient direction
 const gradDir = () => {
   
-  return nav.dataset.gradientDirection;
+  return nav.dataset.gradientDirection; 
   
 };
 
@@ -25,7 +25,7 @@ const buildGrad = (value, direction) => {
 //calc background-size
 const gradSize = () => {
   
-  //1. get number of columns
+  //get number of columns
   let firstItemPosX = navItems[0].getBoundingClientRect().left;
   let cols = 1;
   
@@ -39,7 +39,7 @@ const gradSize = () => {
     
   }
   
-  //2. get number of rows
+  //get number of rows
   let itemPosY = navItems[0].getBoundingClientRect().top;
   let rows = 1;
   
@@ -53,16 +53,52 @@ const gradSize = () => {
     
   }
   
-  //3. get size of 1 item
+  // get size of 1 item
   const itemWidth = navItems[0].offsetWidth;
   const itemHeight = navItems[0].offsetHeight;
   
-  //4. get gradient size
+  //get gradient size
   let gradSizeX = itemWidth * cols;
   let gradSizeY = itemHeight * rows;
   
-  return [gradSizeX, gradSizeY];
+  return [gradSizeX, gradSizeY, cols, rows];
   
+};
+
+// add col and row for every item
+const colRow = () => {
+  
+  let row = 1;
+  let col = 1;
+  
+  let xItemPos = navItems[0].getBoundingClientRect().left;
+  
+  //setting cols
+  for(let i = 0; i < navItems.length; i++) {
+    
+      if (navItems[i].getBoundingClientRect().left > xItemPos) {
+        col++;
+    } else {
+      col = 1;
+    }
+    
+    navItems[i].dataset.col = col;
+  }
+  
+  //setting rows
+  let yItemPos = navItems[0].getBoundingClientRect().top;
+  
+  for(let i = 0; i < navItems.length; i++) {
+    
+    if (navItems[i].getBoundingClientRect().top > yItemPos) {
+      row++
+      
+      yItemPos = navItems[i].getBoundingClientRect().top;
+    }
+    
+    navItems[i].dataset.row = row;
+    
+  }
 };
 
 //setting gradient styles
@@ -79,10 +115,18 @@ const setGrad = elem => {
   
   elem.style.backgroundSize = `${bgSizeX}px ${bgSizeY}px`;
   
+  //background position style
+  const bgPosX = bgSizeX * (elem.dataset.col - 1) / gradSize()[2];
+  const bgPosY = bgSizeY * (elem.dataset.row - 1) / gradSize()[3];
+  
+  elem.style.backgroundPosition = `${-bgPosX}px ${-bgPosY}px`;
+  
 };
 
-//setting gradient styles to every item onload
+//setting gradient styles to every item
 navItems.forEach(elem => {
+  
+  colRow();
   
   setGrad(elem);
   
