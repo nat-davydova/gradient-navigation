@@ -142,3 +142,41 @@ body {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
+
+.nav-area__item {
+  @include transition-mix();
+  
+  padding: 40px 20px;
+  
+  text-align: center;
+  color: #fff;
+  
+  background-image: linear-gradient(to top right, 
+    #00fff0, 
+    #5c9ff7 40%, 
+    #d322ff 80% );
+  border-radius: 5px;
+  
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: 
+      0 4px 5px 0 rgba(0,0,0,0.14), 
+      0 1px 10px 0 rgba(0,0,0,0.12), 
+      0 2px 4px -1px rgba(0,0,0,0.3);
+  }
+}
+
+.nav-area__item-icon {
+  font: {
+    size: 25px;
+  }
+}
+
+.nav-area__item-title  {
+  
+  & > p {
+    margin-bottom: 0;
+  }
+  
+}
