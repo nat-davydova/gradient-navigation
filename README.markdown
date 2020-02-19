@@ -2,6 +2,8 @@
 
 [Check the demo](https://codepen.io/nat-davydova/pen/mNOMBV)
 
+<img src="http://natali-davydova.me/assets/img/portfolio/grad-tabs/sample.jpg" width="550" />
+
 - Pug/HTML
 - SCSS/CSS
 - JS (ES6)/ Babel
